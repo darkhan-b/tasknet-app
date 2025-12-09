@@ -1,21 +1,23 @@
-function MainDashboard() {
-  return (
-    <main style={{ padding: "16px" }}>
-      <h2>Главная панель</h2>
-      <p>Здесь в будущем будет список задач, статистика и другие виджеты.</p>
+import styles from "./MainDashboard.module.css";
 
-      <div
-        style={{
-          marginTop: "16px",
-          padding: "16px",
-          border: "1px solid #ddd",
-          borderRadius: "8px",
-          backgroundColor: "#ffffff",
-        }}
-      >
+function MainDashboard({ tasks }) {
+  return (
+    <main className={styles.container}>
+      <h2>Главная панель</h2>
+      <p>Ниже отображается список продуктов через props:</p>
+
+      <ol className={styles.taskList}>
+        {tasks.map((task) => (
+          <li key={task.id} className={styles.taskItem}>
+            {task.title} — {task.buyed ? "Куплен" : "Не куплено"}
+          </li>
+        ))}
+      </ol>
+
+      {/* <div className={styles.card}> 
         <h3>Пример блока</h3>
-        <p>Это просто заглушка, чтобы увидеть структуру страницы.</p>
-      </div>
+        <p>Это просто заглушка, чтобы увидеть структуру страницы.</p> // Пока лишнее
+      </div> */}
     </main>
   );
 }

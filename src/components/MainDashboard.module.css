@@ -1,0 +1,25 @@
+.container {
+  padding: 16px;
+}
+
+.card {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.taskList {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.taskItem {
+  background: #5d4747;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+}
