@@ -1,10 +1,10 @@
 import styles from "./MainDashboard.module.css";
+import UserForm from "./UserForm";
 
-function MainDashboard({ tasks }) {
+function MainDashboard() {
   return (
     <main className={styles.container}>
-      <h2>Главная панель</h2>
-      <p>Ниже отображается список продуктов через props:</p>
+      {/* <p>Ниже отображается список продуктов через props:</p>
 
       <ol className={styles.taskList}>
         {tasks.map((task) => (
@@ -14,10 +14,9 @@ function MainDashboard({ tasks }) {
         ))}
       </ol>
 
-      {/* <div className={styles.card}> 
-        <h3>Пример блока</h3>
-        <p>Это просто заглушка, чтобы увидеть структуру страницы.</p> // Пока лишнее
-      </div> */}
+      <hr /> */}
+
+      <UserForm />
     </main>
   );
 }

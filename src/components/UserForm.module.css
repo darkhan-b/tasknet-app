@@ -1,0 +1,85 @@
+.form {
+  max-width: 450px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.input {
+  width: 180px;
+  padding: 10px 15px;
+  margin-bottom: 14px;
+  padding-right: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #262630;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+.select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.radioGroup input {
+  accent-color: #585769;
+}
+
+.output {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eaeaea;
+}
+
+.output p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.output strong {
+  color: #111;
+}
