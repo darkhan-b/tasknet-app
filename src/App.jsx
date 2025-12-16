@@ -1,22 +1,70 @@
+import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import MainDashboard from "./components/MainDashboard";
 
 function App() {
-  // const itemList = [
-  //   { id: 1, title: "Яблоко", buyed: false },
-  //   { id: 2, title: "Банан", buyed: true },
-  //   { id: 3, title: "Творог", buyed: false },
-  //   { id: 4, title: "Курица", buyed: true },
-  //   { id: 5, title: "Соль", buyed: false },
-  // ];
+  const [boards, setBoards] = useState([
+    {
+      id: 1,
+      title: "Математика",
+      description: "Наука логики и структур",
+      createdAt: "2025-03-13",
+    },
+    {
+      id: 2,
+      title: "Физика",
+      description: "Наука об явлениях и законах природы",
+      createdAt: "2025-03-12",
+    },
+    {
+      id: 3,
+      title: "Химия",
+      description: "Наука о веществах",
+      createdAt: "2025-03-14",
+    },
+    {
+      id: 4,
+      title: "География",
+      description: "Наука о Земле",
+      createdAt: "2025-03-15",
+    },
+  ]);
+
+  const addBoard = (title, description) => {
+    const newBoard = {
+      id: Date.now(),
+      title,
+      description,
+      createdAt: new Date().toISOString().slice(0, 10),
+    };
+
+    setBoards((prev) => [...prev, newBoard]);
+  };
+
+  const removeBoard = (id) => {
+    setBoards((prev) => prev.filter((board) => board.id !== id));
+  };
 
   return (
     <div style={{ display: "flex" }}>
       <Sidebar />
-      <div style={{ minWidth: '900px', width: '100%', display: "flex", flexDirection: "column" }}>
+
+      <div
+        style={{
+          minWidth: "900px",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <Header />
-        <MainDashboard />
+
+        <MainDashboard
+          boards={boards}
+          onAddBoard={addBoard}
+          onRemoveBoard={removeBoard}
+        />
       </div>
     </div>
   );
