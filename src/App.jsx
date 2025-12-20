@@ -32,34 +32,27 @@ function App() {
   ]);
 
   const addBoard = (title, description) => {
-    const newBoard = {
-      id: Date.now(),
-      title,
-      description,
-      createdAt: new Date().toISOString().slice(0, 10),
-    };
-
-    setBoards((prev) => [...prev, newBoard]);
+    setBoards((prev) => [
+      ...prev,
+      {
+        id: Date.now(),
+        title,
+        description,
+        createdAt: new Date().toISOString().slice(0, 10),
+      },
+    ]);
   };
 
   const removeBoard = (id) => {
-    setBoards((prev) => prev.filter((board) => board.id !== id));
+    setBoards((prev) => prev.filter((b) => b.id !== id));
   };
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className="flex min-h-screen bg-slate-900">
       <Sidebar />
 
-      <div
-        style={{
-          minWidth: "900px",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+      <div className="flex flex-col flex-1">
         <Header />
-
         <MainDashboard
           boards={boards}
           onAddBoard={addBoard}

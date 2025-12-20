@@ -1,17 +1,19 @@
-import styles from "./MainDashboard.module.css";
-
 function BoardItem({ board, onRemove }) {
   return (
-    <div className={styles.boardCard}>
-      <h3>Название: {board.title}</h3>
-      <p>Описание: {board.description}</p>
+    <div
+      className="bg-slate-800 border border-slate-700 rounded-xl p-4
+                 flex flex-col hover:border-blue-500 hover:shadow-lg transition"
+    >
+      <h3 className="text-lg font-semibold mb-2">{board.title}</h3>
 
-      <div className={styles.cardFooter}>
-        <span className={styles.date}>Создано: {board.createdAt}</span>
+      <p className="text-gray-300 flex-1">{board.description}</p>
+
+      <div className="flex justify-between items-center mt-4 text-sm">
+        <span className="text-gray-400">{board.createdAt}</span>
 
         <button
-          className={styles.deleteButton}
           onClick={() => onRemove(board.id)}
+          className="text-red-400 hover:text-red-300 transition"
         >
           Удалить
         </button>
