@@ -1,0 +1,49 @@
+.board-item {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+
+  &:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+
+  &__description {
+    color: #cbd5f5;
+    flex: 1;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  &__date {
+    color: #94a3b8;
+  }
+
+  &__remove {
+    background: none;
+    border: none;
+    color: #f87171;
+    cursor: pointer;
+
+    &:hover {
+      color: #fca5a5;
+    }
+  }
+}

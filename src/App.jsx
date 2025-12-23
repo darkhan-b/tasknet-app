@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
-import MainDashboard from "./components/MainDashboard";
+import MainDashboard from "./components/MainDashboard/MainDashboard";
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
+import "./App.scss";
 
 function App() {
   const [boards, setBoards] = useState([
@@ -48,10 +49,10 @@ function App() {
   };
 
   return (
-    <div className="flex min-h-screen bg-slate-900">
+    <div className="app">
       <Sidebar />
 
-      <div className="flex flex-col flex-1">
+      <div className="app__content">
         <Header />
         <MainDashboard
           boards={boards}
