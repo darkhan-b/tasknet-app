@@ -5,6 +5,11 @@
   color: #e5e7eb;
   padding: 16px;
   border-right: 1px solid #334155;
+  overflow-y: auto;
+
+  &__close {
+    display: none;
+  }
 
   &__title {
     font-size: 18px;
@@ -32,5 +37,37 @@
       background-color: #334155;
       color: #ffffff;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    z-index: 100;
+    transition: left 0.3s ease;
+    border-right: none;
+
+    &--open {
+      left: 0;
+    }
+
+    &__close {
+      display: block;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 16px;
+      cursor: pointer;
+    }
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 90;
   }
 }

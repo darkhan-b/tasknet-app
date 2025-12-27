@@ -5,15 +5,21 @@ import BoardItem from "../BoardItem/BoardItem";
 function MainDashboard({ boards, onAddBoard, onRemoveBoard }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [filterStatus, setFilterStatus] = useState("all");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title || !description) return;
+    if (!title.trim() || !description.trim()) return;
 
     onAddBoard(title, description);
     setTitle("");
     setDescription("");
   };
+
+  const filteredBoards = boards.filter((board) => {
+    if (filterStatus === "all") return true;
+    return board.status === filterStatus;
+  });
 
   return (
     <main className="dashboard">
@@ -37,12 +43,37 @@ function MainDashboard({ boards, onAddBoard, onRemoveBoard }) {
 
       <h2>Список досок</h2>
 
-      {boards.length === 0 ? (
+      <div className="dashboard__filters">
+        <button
+          className={filterStatus === "all" ? "active" : ""}
+          onClick={() => setFilterStatus("all")}
+        >
+          Все
+        </button>
+        <button
+          className={filterStatus === "active" ? "active" : ""}
+          onClick={() => setFilterStatus("active")}
+        >
+          Активные
+        </button>
+        <button
+          className={filterStatus === "archived" ? "active" : ""}
+          onClick={() => setFilterStatus("archived")}
+        >
+          Архивные
+        </button>
+      </div>
+
+      {filteredBoards.length === 0 ? (
         <p className="dashboard__empty">Досок пока нет</p>
       ) : (
         <div className="dashboard__grid">
-          {boards.map((board) => (
-            <BoardItem key={board.id} board={board} onRemove={onRemoveBoard} />
+          {filteredBoards.map((board) => (
+            <BoardItem
+              key={board.id}
+              board={board}
+              onRemove={onRemoveBoard}
+            />
           ))}
         </div>
       )}

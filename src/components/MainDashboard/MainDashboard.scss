@@ -51,4 +51,34 @@
   &__empty {
     color: #94a3b8;
   }
+
+  &__filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    button {
+      padding: 6px 14px;
+      font-size: 14px;
+      border-radius: 8px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #e5e7eb;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: #3b82f6;
+        color: #fff;
+      }
+
+      &.active {
+        background: #2563eb;
+        border-color: #2563eb;
+        color: #fff;
+        box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+      }
+    }
+  }
 }

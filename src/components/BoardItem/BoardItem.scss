@@ -22,14 +22,20 @@
   &__description {
     color: #cbd5f5;
     flex: 1;
+    margin-bottom: 12px;
   }
 
   &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 16px;
     font-size: 14px;
+    margin-top: 8px;
+  }
+
+  &__status {
+    color: #e5e7eb;
+    font-weight: 500;
   }
 
   &__date {
@@ -37,10 +43,12 @@
   }
 
   &__remove {
+    margin-top: 12px;
     background: none;
     border: none;
     color: #f87171;
     cursor: pointer;
+    align-self: flex-start;
 
     &:hover {
       color: #fca5a5;

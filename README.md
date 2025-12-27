@@ -1,16 +1,24 @@
-# React + Vite
+# TaskNet App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TaskNet App — учебное React-приложение для управления досками (уроками).  
+Проект реализован с использованием компонентного подхода и демонстрирует работу с состоянием, динамический рендеринг списков и базовую стилизацию интерфейса.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Используемый стек технологий
 
-## React Compiler
+- **React** (JSX)
+- **SCSS** для стилизации компонентов
+- **npm** — менеджер пакетов
+- **Vite** — сборщик и dev-сервер
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ▶️ Запуск локально
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Клонировать репозиторий:
+```bash
+git clone https://github.com/darkhan-b/tasknet-app.git
+cd tasknet-app
+npm install
+npm run dev
