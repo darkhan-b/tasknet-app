@@ -14,22 +14,51 @@ function App() {
       title: "Математика",
       description: "Наука логики и структур",
       status: "active",
-      createdAt: "2025-03-13",
+      createdAt: "2025-12-13",
     },
     {
       id: 2,
       title: "Физика",
       description: "Наука об явлениях и законах природы",
       status: "active",
-      createdAt: "2025-03-12",
+      createdAt: "2025-12-12",
     },
     {
       id: 3,
       title: "Химия",
       description: "Наука о веществах",
       status: "archived",
-      createdAt: "2025-03-14",
+      createdAt: "2025-12-14",
     },
+    {
+      id: 4,
+      title: "География",
+      description: "изучающая поверхность Земли",
+      status: "active",
+      createdAt: "2025-12-14",
+    },
+    {
+      id: 5,
+      title: "Казахский язык",
+      description: "Гуманитарный предмет",
+      status: "archived",
+      createdAt: "2025-12-17",
+    },
+    {
+      id: 6,
+      title: "История Казахстана",
+      description: "Наука о прошлом человечества",
+      status: "archived",
+      createdAt: "2025-12-17",
+    },
+    {
+      id: 7,
+      title: "Черчение",
+      description: "правила выполнения и чтения графических изображений",
+      status: "active",
+      createdAt: "2025-12-20",
+    },
+
   ]);
 
   const addBoard = (title, description) => {

@@ -16,8 +16,8 @@ function Header({ onMenuClick }) {
 
       <nav className="header__nav">
         <button>Главная</button>
-        <button>Доски</button>
-        <button>Таски</button>
+        {/* <button>Доски</button>
+        <button>Таски</button> */}
         <button className="primary">Войти</button>
       </nav>
     </header>

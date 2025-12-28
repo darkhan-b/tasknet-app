@@ -33,6 +33,28 @@
     gap: 20px;
   }
 
+  button {
+      background: none;
+      border: none;
+      color: #cbd5f5;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &.primary {
+        background: #2563eb;
+        padding: 4px 12px;
+        border-radius: 6px;
+
+        &:hover {
+          background: #3b82f6;
+        }
+      }
+    }
+
   &__burger {
     display: none;
     background: none;

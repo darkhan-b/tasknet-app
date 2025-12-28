@@ -22,3 +22,6 @@ git clone https://github.com/darkhan-b/tasknet-app.git
 cd tasknet-app
 npm install
 npm run dev
+
+```
+2. Скриншоты в папке img (чтобы не клонировать)
